@@ -17,6 +17,14 @@ const Login = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        // ✅ Email validation — only .com allowed
+        const emailPattern = /^[^\s@]+@[^\s@]+\.com$/;
+        if (!emailPattern.test(formData.email)) {
+            setError("Only .com email addresses are accepted (e.g. name@example.com)");
+            return;
+        }
+
         setLoading(true);
         setError('');
         try {
@@ -103,15 +111,20 @@ const Login = () => {
                                 <div className="relative">
                                     <Mail className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
                                     <input
-                                        type="email"
+                                        type="text"
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
                                         className="w-full pl-12 pr-4 py-3.5 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200"
-                                        placeholder="Enter your email"
+                                        placeholder="Enter your .com email"
                                         required
                                     />
                                 </div>
+                                {formData.email && !/^[^\s@]+@[^\s@]+\.com$/.test(formData.email) && (
+                                    <p className="text-red-500 text-sm mt-1">
+                                        Only .com emails are accepted (e.g. name@example.com)
+                                    </p>
+                                )}
                             </div>
 
                             <div>
