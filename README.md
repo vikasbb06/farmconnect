@@ -2,7 +2,6 @@
 
 FarmConnect is a full-stack web application that connects Farmers & Consumers directly — enabling product browsing, transaction tracking, market access, and language support for regional users.
 
-✳️ GitHub Repository: https://github.com/Sneham-06/farmconnect/
 
 📘 About the Project
 
@@ -121,15 +120,3 @@ GET	      /dashboar     	User dashboard
 🧠 AI-based price prediction
 
 📈 Analytics dashboard
-
-👩‍💻 Author
-
-Sneha Mudgal
-
-📍 India
-
-💼 Full Stack Developer (React + Node + MongoDB)
-
-📧 Email: snehamudgal18@gmail.com
-
-🔗 GitHub: https://github.com/Sneham-06
